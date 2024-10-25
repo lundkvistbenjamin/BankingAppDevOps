@@ -1,0 +1,17 @@
+{
+    "user1": {
+        "password": "pass1",
+        "balance": 1500.00,
+        "account_number": "111111111"
+    },
+    "user2": {
+        "password": "pass2",
+        "balance": 2500.50,
+        "account_number": "222222222"
+    },
+    "user3": {
+        "password": "pass3",
+        "balance": 3500.75,
+        "account_number": "333333333"
+    }
+}

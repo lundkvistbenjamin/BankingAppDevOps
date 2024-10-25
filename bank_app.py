@@ -1,14 +1,15 @@
+import json
 import sys
 
 class BankApp:
-    def __init__(self):
-        # Hard-coded users with usernames, passwords, account numbers, and balances
-        self.users = {
-            'user1': {'password': 'pass1', 'account_number': '111111', 'balance': 1000},
-            'user2': {'password': 'pass2', 'account_number': '222222', 'balance': 2000},
-            'user3': {'password': 'pass3', 'account_number': '333333', 'balance': 3000}
-        }
+    def __init__(self, db_filename='db.json'):
+        self.users = self.load_users(db_filename)
         self.current_user = None
+
+    def load_users(self, filename):
+        """Load user data from a JSON file."""
+        with open(filename, 'r') as file:
+            return json.load(file)
 
     def login(self, username, password):
         """Login to the account if the credentials match."""
